@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #6200ee;
+  --color-accent-one: #3700b3;
+  --color-accent-two: #03dac5;
+  --color-text-one: #f2f2ef;
+  --color-text-two: #010203;
+}
+
+body {
+  margin-top: 30px;
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 90vh;
+}
+
+::placeholder {
+  font-family: inherit;
+  color: var(--color-text-two);
+}
+
+.input {
+  background: var(--color-accent-two);
+  display: flex;
+  color: var(--color-text-two);
+  font-weight: 500;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+input {
+  all: unset;
+  padding: 5px 10px;
+  height: 40px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+i {
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
+
+.container {
+  background: var(--color-text-one);
+  border-radius: 20px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 70%;
+  padding: 15px 20px;
+}
+
+li {
+  list-style: none;
+  padding-inline: 15px;
+  text-align: center;
+}
+
+.list {
+  cursor: pointer;
+}
+
+.invalid {
+  color: var(--color-text-two);
+  font-size: 2rem;
+  padding-inline: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.sorry {
+  margin-inline: auto;
+  margin-top: 20px;
+  font-size: 10rem;
+  color: var(--color-accent-one);
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-inline: auto;
+  margin-block: 20px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.container > img {
+  width: 300px;
+  margin-inline: auto;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
+.ingredients {
+  color: var(--color-text-two);
+  margin-bottom: 10px;
+  padding-inline: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#recipe {
+  margin-block: 15px;
+  background: var(--color-bg);
+  width: min(50%, 200px);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-one);
+  padding-block: 5px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+  }
+
+  .container > img {
+    max-width: 300px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
